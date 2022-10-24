@@ -15,11 +15,11 @@ attributes:
       # updateChannel defines IDE version release stage: Release, EAP
       updateChannel: Release
 components:
-- name: ubuntu-container
+- name: openjdk-container
   # Dev environment container config
   container:
     # use image from a Space Packages registry
-    image: duxor.registry.jetbrains.space/p/crl/container/dev-image:latest
+    image: openjdk:latest
     # environment variables
     env:
       - name: API_URL
