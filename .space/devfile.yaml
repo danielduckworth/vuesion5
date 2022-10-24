@@ -1,0 +1,28 @@
+schemaVersion: 2.2.0
+metadata:
+  name: 'Vesion5 dev'
+attributes:
+  space:
+    # regular, large, xlarge
+    instanceType: regular
+    # a default IDE for the project
+    editor:
+      # (Required) IDE type: Idea, WebStorm, PyCharm,
+      # RubyMine, CLion, Fleet, GoLand, PhpStorm
+      type: WebStorm
+      version: '2022.1'
+      # Space uses JetBrains Toolbox App to install IDEs to a dev environment.
+      # updateChannel defines IDE version release stage: Release, EAP
+      updateChannel: Release
+components:
+- name: ubuntu-container
+  # Dev environment container config
+  container:
+    # use image from a Space Packages registry
+    image: duxor.registry.jetbrains.space/p/crl/container/dev-image:latest
+    # environment variables
+    env:
+      - name: API_URL
+        value: 'https://my-site/http_api'
+      - name: PATH_IMG
+        value: './img/'
