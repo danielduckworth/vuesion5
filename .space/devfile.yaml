@@ -14,9 +14,3 @@ attributes:
       # Space uses JetBrains Toolbox App to install IDEs to a dev environment.
       # updateChannel defines IDE version release stage: Release, EAP
       updateChannel: Release
-components:
-- name: openjdk-container
-  # Dev environment container config
-  container:
-    # use image from a Docker hub registry
-    image: openjdk:latest
